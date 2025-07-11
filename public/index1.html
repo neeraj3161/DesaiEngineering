@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapovan Tools AND PROTO LLP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .gear-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gear {
+            width: 100px;
+            height: 100px;
+            border: 10px solid #000;
+            border-radius: 50%;
+            border-top: 10px solid transparent;
+            border-right: 10px solid transparent;
+            position: relative;
+            animation: rotate 2s linear infinite;
+        }
+
+        .gear::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            border: 6px solid #000;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .gear2 {
+            animation: rotate2 2s linear infinite;
+            margin-left: -10px;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate2 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gear-container">
+        <div class="gear"></div>
+        <div class="gear gear2"></div>
+    </div>
+
+    <script>
+        // Redirect to index.html after 5 seconds
+        setTimeout(function () {
+            window.location.href = "home.html";
+        }, 3000); // 5000 milliseconds = 5 seconds
+    </script>
+</body>
+
+</html>
